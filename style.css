@@ -37,6 +37,7 @@ body::-webkit-scrollbar-thumb {
 
 a{
   text-decoration: none;
+  color: #B400EB;
 }
 
 
@@ -88,51 +89,55 @@ header > h1{
   cursor: pointer;
 }
 
-.icons > svg{
+.icons > a > svg{
   width: 30px;
   height: 30px;
 }
-.icons > svg:not(:hover){
+.icons > a > svg:not(:hover){
+  color: #B400EB;
   opacity: 0.4;
   transition: 0.4s;
 }
 
-.icons > svg:hover{
+.icons > a > svg:hover{
+  color: white;
   filter: drop-shadow(0px 0px 10px #B400EB);
   transition: 0.4s;
   scale: 1.2;
 }
 
-
-.logo{
-  width: 300px;
-  filter: drop-shadow(0px 0px 10px #B400EB ) blur(5px) contrast(200%);
-  animation: pulsar infinite 3s;
-}
-@keyframes pulsar {
-  0%{
-    transform: scale(1);
-  }
-
-  50%{
-    transform: scale(1.1);
-  }
-
-  40%{
-    transform: scale(1.1.2);
-  }
-
-  100%{
-    transform: scale(1);
-  }
+.whats,.gmail1{
+  display: none;
 }
 
 .logo2{
   width: 300px;
-  position: absolute;
-  left: 40.1%;
-  z-index: 0;
+  animation: pulsar 2s linear infinite;
 }
+
+
+@keyframes pulsar {
+  0%{
+    filter: drop-shadow(0px 0px 10px #b400eb);
+  }
+
+  50%{
+
+    filter: drop-shadow(0px 0px 15px #B400EB);
+  }
+
+  60%{
+
+    filter: drop-shadow(0px 0px 20px #b400eb);
+  }
+
+  100%{
+
+    filter: drop-shadow(0px 0px 10px #b400eb);
+  }
+}
+
+
 
 .menu > nav > a{
   color: white;
@@ -264,17 +269,17 @@ header,.menu > nav{
   position: absolute;
   display: none;
   transition: 2s;
-  
-
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  
 }
+
+.sete{
+  background-position: top;
+}
+
+
 
 .navigation {
   width: 100%;
@@ -354,7 +359,6 @@ header,.menu > nav{
   display: block;
   transition: 1s;
   opacity: 1;
-  box-shadow: 0px 0px 15500px inset black;
 }
 
 #slide1:checked ~ .navigation > .btn1,
@@ -401,8 +405,9 @@ header,.menu > nav{
 .corpo{
   width: 100%;
   height: auto;
-  margin: auto;
   background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
 }
 
 .imagens{
@@ -532,10 +537,17 @@ display: flex ;
 }
 .intrapacotes{
   display: flex;
-  flex-direction: row;
   width: 100%;
-  justify-content: center;
+  flex-direction: column;
   gap: 50px;
+  justify-content: center;
+  
+}
+
+.praseparar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .pacote-img{
@@ -551,6 +563,7 @@ display: flex ;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  
 }
 
 .carousel2 {
@@ -560,8 +573,7 @@ display: flex ;
   background-color: rgb(0, 0, 0);
   display: block;
   border-radius: 20px;
-  box-shadow: 0px 0px 20px #b400eb67;
-  
+  box-shadow: 0px 0px 20px #ffffff67;
 }
 
 .slides2 {
@@ -699,16 +711,166 @@ display: flex ;
   display: none;
 }
 
+.carousel4 {
+  width: 90%;
+  height: 760px;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #ffffff67;
+}
+
+.slides4 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+  
+}
+
+.slide4 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  transition: 2s;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+
+
+#sl1:checked ~ .slides4 .slide4:nth-child(2){
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+#sl2:checked ~ .slides4 .slide4:nth-child(3){
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+}
+#sl3:checked ~ .slides4 .slide4:nth-child(4){
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+}
+#sl4:checked ~ .slides4 .slide4:nth-child(1){
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+
+
+#sl1:checked ~ .slides4 .slide4:nth-child(1),
+#sl2:checked ~ .slides4 .slide4:nth-child(2),
+#sl3:checked ~ .slides4 .slide4:nth-child(3),
+#sl4:checked ~ .slides4 .slide4:nth-child(4){
+  display: block;
+  transition: 1s;
+  opacity: 1;
+}
+
+
+
+#sl1,#sl2,#sl3,#sl4{
+  display: none;
+}
+
+.carousel5 {
+  width: 90%;
+  height: 760px;
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #ffffff67;
+}
+
+.slides5 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  
+}
+
+.slide5 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  transition: 2s;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+#si1:checked ~ .slides5 .slide5:nth-child(2){
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+#si2:checked ~ .slides5 .slide5:nth-child(3){
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+}
+#si3:checked ~ .slides5 .slide5:nth-child(4){
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+}
+#si4:checked ~ .slides5 .slide5:nth-child(1){
+  display: block;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+
+
+#si2:checked ~ .slides5 .slide5:nth-child(2),
+#si1:checked ~ .slides5 .slide5:nth-child(1),
+#si3:checked ~ .slides5 .slide5:nth-child(3),
+#si4:checked ~ .slides5 .slide5:nth-child(4){
+  display: block;
+  transition: 1s;
+  opacity: 1;
+}
+
+
+#si1,#si2,#si3,#si4{
+  display: none;
+}
+
 .texto-pacote{
   padding: 10px;
   padding-top: 20px;
   color: white;
   text-align: center;
 }
+.texto-pacote >h3{
+  font-weight: normal;
+}
 
 .ocultar{
   opacity: 1;
   transition: 0.4s;
+}
+
+.jujuba{
+  background-size: contain;
 }
 
 footer{
@@ -724,7 +886,7 @@ footer{
 }
 
 
-footer > div > svg{
+footer > div > a > svg{
   color: #ffffff;
   padding: 10px;
   width: 30px;
@@ -732,7 +894,7 @@ footer > div > svg{
   transition: 0.4s;
 }
 
-footer > .iconess > svg:not(:hover){
+footer > .iconess > a > svg:not(:hover){
   opacity: .4;
 }
 
@@ -784,10 +946,6 @@ footer div {
 }
 
 
-div > svg{
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-}
 
 
 
@@ -796,12 +954,6 @@ div > svg{
 
 @media only screen and (max-width: 1680px) {
 
-.logo2{
-  width: 300px;
-  position: absolute;
-  left: 38.5%;
-  z-index: 0;
-}
 
 .imagens2{
   display: grid;
@@ -817,12 +969,7 @@ div > svg{
 
 @media only screen and (max-width: 1450px) {
 
-  .logo2{
-    width: 300px;
-    position: absolute;
-    left: 36.5%;
-    z-index: 0;
-  }
+
 
   .sobre{
     background-image: url(imagens/fundo.jpg);
@@ -880,13 +1027,7 @@ div > svg{
 
   @media only screen and (max-width: 1024px) {
 
-    .logo2{
-      width: 300px;
-      position: absolute;
-      left: 35.1%;
-      z-index: 0;
-    }
-  
+
     .sobre{
       background-image: url(imagens/fundo.jpg);
       background-attachment: fixed;
@@ -962,9 +1103,14 @@ div > svg{
       width: 20px;
       height: 20px;
     
-  
-    
-    }
+  }
+  .whats,.gmail1{
+        display: block;
+      }
+      .whats2,.gmail2{
+        display: none;
+      }
+      
 }
 
   @media only screen and (max-width: 767px) {
@@ -1006,12 +1152,7 @@ div > svg{
     padding: 20px;
   }
   
-  .logo2{
-    width: 300px;
-    position: absolute;
-    left: 30%;
-    z-index: 0;
-  }
+
   
   .sobre > div > div> img{
     width: 300px;
@@ -1054,6 +1195,23 @@ div > svg{
   .texto{
     width: 300px;
   }
+
+
+
+.intrapacotes, .praseparar{
+  flex-direction: column;
+}
+
+.whats,.gmail1{
+  display: block;
+}
+
+.whats2,.gmail2{
+  display: none;
+}
+
+
+
   
   
   
@@ -1096,7 +1254,7 @@ div > svg{
     header,.menu > nav{
       color: white;
       font-weight: lighter;
-      font-size: 0.7em;
+      font-size: 0.9em;
       letter-spacing: 2px;
   }
   
@@ -1104,13 +1262,7 @@ div > svg{
     flex-direction: column-reverse;
     padding: 20px;
   }
-  
-  .logo2{
-    width: 300px;
-    position: absolute;
-    left: 19%;
-    z-index: 0;
-  }
+
   
   .sobre > div > div> img{
     width: 300px;
@@ -1169,7 +1321,7 @@ div > svg{
     margin: auto;
   }
 
-  .intrapacotes{
+  .intrapacotes, .praseparar{
     flex-direction: column;
   }
   
@@ -1204,6 +1356,14 @@ div > svg{
     background-size: cover;
     background-position: -120px;
   
+  }
+
+  .whats,.gmail1{
+    display: block;
+  }
+
+  .whats2,.gmail2{
+    display: none;
   }
   
   

@@ -5,7 +5,7 @@ document.getElementById("slide1").checked = true
 
 setInterval(function(){
     nextImage()
-}, 3000)
+}, 2000)
 
 function nextImage(){
     count++
@@ -91,6 +91,27 @@ function pacotes(){
     }
 }
 
+
+let cu = 1
+
+document.getElementById("si1").checked = true
+
+
+setInterval(
+    function(){
+    proxin()
+}, 1500)
+
+function proxin(){
+    cu++
+    if(cu > 4){
+        cu = 1
+
+    }
+   
+    document.getElementById("si" + cu).checked = true
+}
+
 let counta = 1
 
 document.getElementById("slid1").checked = true
@@ -130,3 +151,30 @@ function proxima(){
    
     document.getElementById("sli" + countan).checked = true
 }
+
+
+
+let co = 1
+
+document.getElementById("sl1").checked = true
+
+
+setInterval(
+    function(){
+    proxm()
+}, 1500)
+
+function proxm(){
+    co++
+    if(co > 4){
+        co = 1
+
+    }
+   
+    document.getElementById("sl" + co).checked = true
+}
+
+
+
+
+
